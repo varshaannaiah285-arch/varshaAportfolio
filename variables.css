@@ -1,0 +1,98 @@
+/* CSS VARIABLES & DESIGN SYSTEM FOR BIT ECE PORTFOLIO */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Font Families */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* HSL Colors - Default Obsidian Dark Mode */
+  --bg-primary-raw: 224, 25%, 8%;
+  --bg-secondary-raw: 224, 25%, 12%;
+  --bg-tertiary-raw: 224, 25%, 16%;
+  
+  --bg-primary: hsl(var(--bg-primary-raw));
+  --bg-secondary: hsl(var(--bg-secondary-raw));
+  --bg-tertiary: hsl(var(--bg-tertiary-raw));
+  
+  /* Text HSL */
+  --text-primary: hsl(220, 20%, 95%);
+  --text-secondary: hsl(220, 15%, 75%);
+  --text-muted: hsl(220, 10%, 55%);
+  
+  /* Neon Accents (Teal & Cyber Purple) */
+  --accent-cyan: hsl(182, 100%, 50%);
+  --accent-cyan-hover: hsl(182, 100%, 40%);
+  --accent-cyan-rgb: 0, 242, 254;
+  
+  --accent-purple: hsl(272, 100%, 65%);
+  --accent-purple-hover: hsl(272, 100%, 55%);
+  --accent-purple-rgb: 172, 79, 255;
+  
+  --accent-gradient: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+  --accent-gradient-hover: linear-gradient(135deg, var(--accent-cyan-hover) 0%, var(--accent-purple-hover) 100%);
+
+  /* Border Strokes */
+  --border-color: hsla(220, 20%, 25%, 0.4);
+  --border-glow: hsla(182, 100%, 50%, 0.15);
+  --border-light: hsla(220, 20%, 95%, 0.08);
+
+  /* Shadows and Effects */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  --shadow-glow-cyan: 0 0 20px hsla(182, 100%, 50%, 0.3);
+  --shadow-glow-purple: 0 0 20px hsla(272, 100%, 65%, 0.3);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  /* Glassmorphism settings */
+  --glass-bg: hsla(224, 25%, 12%, 0.7);
+  --glass-blur: blur(16px);
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] {
+  --bg-primary-raw: 220, 20%, 97%;
+  --bg-secondary-raw: 0, 0%, 100%;
+  --bg-tertiary-raw: 220, 15%, 92%;
+  
+  --bg-primary: hsl(var(--bg-primary-raw));
+  --bg-secondary: hsl(var(--bg-secondary-raw));
+  --bg-tertiary: hsl(var(--bg-tertiary-raw));
+  
+  /* Text HSL */
+  --text-primary: hsl(220, 30%, 15%);
+  --text-secondary: hsl(220, 20%, 40%);
+  --text-muted: hsl(220, 15%, 55%);
+  
+  /* Neon Accents (Tailored for white backgrounds) */
+  --accent-cyan: hsl(195, 100%, 42%);
+  --accent-cyan-hover: hsl(195, 100%, 35%);
+  
+  --accent-purple: hsl(265, 85%, 55%);
+  --accent-purple-hover: hsl(265, 85%, 45%);
+
+  /* Border Strokes */
+  --border-color: hsla(220, 20%, 80%, 0.5);
+  --border-glow: hsla(195, 100%, 42%, 0.1);
+  --border-light: hsla(220, 20%, 20%, 0.05);
+
+  /* Shadows and Effects */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.06);
+  
+  /* Glassmorphism settings for light theme */
+  --glass-bg: hsla(0, 0%, 100%, 0.8);
+}
